@@ -2,6 +2,7 @@ import random
 import pandas as pd
 
 
+names = []
 xs = []
 ys = []
 widths = []
@@ -16,12 +17,14 @@ for i in range(10000):
         width = random.randint(1, 5)
     while( y + height > 10000):
         height = random.randint(1, 20)
+    names.append('r'+str(i+1))
     xs.append(x)
     ys.append(y)
     widths.append(width)
     heights.append(height)
 
 records = pd.DataFrame({
+    'name': names,
     'x': xs,
     'y': ys,
     'width': widths,
