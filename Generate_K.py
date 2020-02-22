@@ -10,6 +10,7 @@ for i in range(1000):
     y.append(random.randint(1, 10000))
 
 records = pd.DataFrame({
+    'index': range(1, 1000),
     'x': x,
     'y': y
 })
